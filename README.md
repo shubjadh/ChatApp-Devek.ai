@@ -185,11 +185,11 @@ To test the real-time chat functionality:
 
 To access chat history:
 
-1. Click on "Show History" button to view previous messages
+1. Click on "View History" button to view previous messages
 2. By default, this will show the history for the "general" room
 3. If you are using a different room, you need to:
    - Type that specific room name in the room name input section
-   - Click the history button to retrieve chat history for that particular room
+   - Click the view history button to retrieve chat history for that particular room
 
 # This is a basic implementation focusing on core functionality.
 
