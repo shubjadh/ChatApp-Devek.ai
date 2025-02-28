@@ -133,9 +133,18 @@ const redisClient = new Redis({
 });
 ```
 
+to:
+```
+const redisClient = new Redis({
+  host: 'localhost',
+  port: 6379,
+  // other configuration options...
+});
+```
+
 3. When running with Docker, set the `REDIS_HOST` environment variable to "redis"
 
-4. When running locally, it will default to "localhost"
+4. When running locally, change to:  "localhost"
 
 ## Implementation Details
 
