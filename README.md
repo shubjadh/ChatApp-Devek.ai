@@ -131,6 +131,7 @@ This project is fully containerized using Docker:
 - **`Dockerfile` for Backend:** Defines the Node.js environment, installs dependencies, and runs the WebSocket server.
 - **`Dockerfile` for Frontend:** Uses Node.js to build the React app and serves it via Nginx.
 - **`docker-compose.yml`** automates multi-container deployment, including Redis.
+- **`Redis Hosting:`** Redis is deployed inside the Docker container and accessible via the redis service name within the Docker network.
 
 To deploy, simply run:
 
