@@ -30,7 +30,7 @@ Before running the project, ensure you have the following installed:
 
 ```sh
 git clone https://github.com/yourusername/ChatApp-Devek.ai.git
-cd project
+cd ChatApp-Devek.ai-main
 ```
 
 ### 2. Install Dependencies
