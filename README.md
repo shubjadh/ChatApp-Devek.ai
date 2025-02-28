@@ -181,10 +181,10 @@ project/
 │
 ├── frontend/             # Frontend application
 │   ├── src/
+│   │   ├── App.tsx
 │   │   ├── components/
 │   │   │   ├── chat.tsx
-│   │   │   ├── chatHistory.tsx
-│   │   │   └── App.tsx
+│   │   │   └── chatHistory.tsx
 │   │   ├── types/
 │   │   │   └── types.ts
 │   │   └── index.tsx
