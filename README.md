@@ -100,6 +100,69 @@ Once started, access the application at:
 - Frontend: [http://localhost:3000](http://localhost:5173)
 - Backend API: [http://localhost:3500](http://localhost:3500) (if applicable)
 
+# Troubleshooting Redis Connection Issues (IF NOT USING DOCKER):
+
+## Redis Connection Error
+
+When running the application locally (not using Docker), you might encounter this error:
+
+```
+[ioredis] Unhandled error event: Error: getaddrinfo ENOTFOUND redis
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+```
+
+## Cause
+
+This error occurs because the application is trying to connect to Redis using the hostname "redis" (which is the service name in Docker Compose) instead of "localhost".
+
+## Solution
+
+Edit the Redis connection configuration in your backend code:
+
+1. Locate the Redis configuration file (likely in `backend/src/config/redis.ts`)
+
+2. Modify the connection settings to use an environment variable with a fallback:
+
+```typescript
+// Example fix
+const redisHost = process.env.REDIS_HOST || 'localhost';
+const redisClient = new Redis({
+  host: redisHost,
+  port: 6379,
+  // other configuration options...
+});
+```
+
+3. When running with Docker, set the `REDIS_HOST` environment variable to "redis"
+
+4. When running locally, it will default to "localhost"
+
+## Implementation Details
+
+### Docker Compose Environment Variable
+
+If you're using Docker Compose, add the environment variable to your backend service:
+
+```yaml
+services:
+  backend:
+    # ... other configuration
+    environment:
+      - REDIS_HOST=redis
+```
+
+### Local Development
+
+For local development, you don't need to set any environment variables. The code will default to 'localhost'.
+
+## Verifying the Fix
+
+After making the changes:
+
+1. Restart your application
+2. Check the server logs - you should no longer see the Redis connection error
+3. The chat functionality should work correctly in both Docker and local environments
+
 ## Testing the Application
 
 To test the real-time chat functionality:
