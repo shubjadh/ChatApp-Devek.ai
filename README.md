@@ -97,7 +97,7 @@ npm start
 
 Once started, access the application at:
 
-- Frontend: [http://localhost:3000](http://localhost:5173)
+- Frontend: [http://localhost:5173](http://localhost:5173)
 - Backend API: [http://localhost:3500](http://localhost:3500) (if applicable)
 
 # Troubleshooting Redis Connection Issues (IF NOT USING DOCKER):
@@ -167,7 +167,7 @@ After making the changes:
 
 To test the real-time chat functionality:
 
-1. Open the frontend URL ([http://localhost:3000](http://localhost:5173)) in multiple browser tabs
+1. Open the frontend URL ([http://localhost:5173](http://localhost:5173)) in multiple browser tabs
 2. Choose the same chat room in each tab (e.g., "general" room which is the default)
 3. Messages sent in one tab should appear instantly in all other tabs connected to the same room
 4. You can use different rooms too, just type in a room name. If other user use that room name they will connect to that specific room.
