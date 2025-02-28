@@ -29,7 +29,7 @@ Before running the project, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```sh
-git clone https://github.com/yourusername/project.git
+git clone https://github.com/yourusername/ChatApp-Devek.ai.git
 cd project
 ```
 
