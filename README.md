@@ -119,7 +119,7 @@ To access chat history:
    - Type that specific room name in the room name input section
    - Click the history button to retrieve chat history for that particular room
 
-This is a basic implementation focusing on core functionality.
+# This is a basic implementation focusing on core functionality.
 
 ## Architecture & Design Choices
 
