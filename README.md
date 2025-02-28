@@ -107,6 +107,7 @@ To test the real-time chat functionality:
 1. Open the frontend URL ([http://localhost:3000](http://localhost:3000)) in multiple browser tabs
 2. Choose the same chat room in each tab (e.g., "general" room which is the default)
 3. Messages sent in one tab should appear instantly in all other tabs connected to the same room
+4. You can use different rooms too, just type in a room name. If other user use that room name they will connect to that specific room.
 
 ### Chat History Access
 
