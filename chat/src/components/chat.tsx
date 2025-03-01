@@ -228,7 +228,7 @@ const Chat = () => {
   };
 
   const viewHistory = () => {
-    navigate('/history');
+    navigate('/history', '_blank');
   };
 
   return (
