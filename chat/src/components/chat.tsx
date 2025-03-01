@@ -228,8 +228,8 @@ const Chat = () => {
   };
 
   const viewHistory = () => {
-    navigate('/history', '_blank');
-  };
+  window.open('/history', '_blank');
+};
 
   return (
     <div style={{ padding: "20px", maxWidth: "500px", margin: "auto" }}>
